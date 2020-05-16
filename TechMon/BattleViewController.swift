@@ -35,15 +35,15 @@ class BattleViewController: UIViewController {
         player = techMonManager.player
         enemy = techMonManager.enemy
         //プレイヤーのステータスを反映
-        playerNameLabel.text = "勇者"
-        playerImageView.image = UIImage(named: "yusya.png")
+        playerNameLabel.text = "\(player.name)"
+        playerImageView.image = player.image
         playerHPLabel.text = "\(player.currentHP) / \(player.maxHP)"
         playerMPLabel.text = "\(player.currentMP) / \(player.maxMP)"
         
         
         //敵のステータスの反映
-        enemyNameLabel.text = "龍"
-        enemyImageView.image = UIImage(named: "monster.png")
+        enemyNameLabel.text = "\(enemy.name)"
+        enemyImageView.image = enemy.image
         enemyHPLabel.text = "\(enemy.currentHP) / \(enemy.maxHP)"
         
         
